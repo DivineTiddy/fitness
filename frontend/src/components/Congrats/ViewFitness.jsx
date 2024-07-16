@@ -70,7 +70,7 @@ const ViewFitness = ({ email }) => {
           <div className="resultDiv">
             <p className="matricText2">Reminder</p>
             <p>
-              {hour} : {minutes} {hour > 11 ? "pm" : "am"}
+              {hour} : {minutes}  {hour > 11 ? "pm" : "am"}
             </p>
           </div>
           <div className="resultDiv">
