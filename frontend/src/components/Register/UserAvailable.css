@@ -1,0 +1,10 @@
+.availableUser {
+    margin: 0px 0px;
+  padding: 0px 22px;
+  list-style-type: disc;
+  color: hsla(79, 100%, 50%, 1);
+}
+.availableUser li::marker {
+  font-size: 27px;
+  font-weight: 17px;
+}

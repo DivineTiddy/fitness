@@ -1,0 +1,122 @@
+.matricContainer{
+    width: 320px;
+    height: 643px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.matricTextAndInput{
+    width: 320px;
+    height: 488px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.matricBtn{
+    width: 320px;
+    height: 55px;
+    border-radius: 100px;
+}
+.matricText{
+    width: 320px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.matricTextPara{
+    width: 293px;
+    height: 96px;
+}
+.matricText1{
+    font-size: 24px;
+    margin: 0;
+    font-weight: bold;
+}
+.matricText2{
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+    color: hsla(0, 0%, 100%, 0.8);
+
+}
+.matricInput{
+    width: 320px;
+    height: 318px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.matricForm{
+    width: 320px;
+    height: 262px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.matricAccod{
+    width: 320px;
+    height: auto;
+    
+}
+.matricAccodList{
+    width: 320px;
+    height: 59px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.matricAccodList div{
+    display: flex;
+    align-items: center;
+}
+.matricAccodList div p{
+    margin: 0px 10px;
+}
+.matricLabel{
+    width: 233px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.matricLabel p{
+    font-size: 16px;
+    margin: 0;
+
+}
+.matricLabel select{
+    background-color: inherit;
+    color: hsla(0, 0%, 100%, 0.8);
+    width: 119px;
+    height: 40px;
+    outline: none;
+    border-radius: 5px;
+    border:1px solid hsla(0, 0%, 100%, 0.8) ;
+}
+.matricText3{
+    font-size: 16px;
+}
+.matricLabel2{
+    width: 202px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.matricLabel2 p{
+    font-size: 16px;
+    margin: 0;
+
+}
+.matricLabel2 select{
+    background-color: inherit;
+    color: hsla(0, 0%, 100%, 0.8);
+    width: 119px;
+    height: 40px;
+    outline: none;
+    border-radius: 5px;
+    border:1px solid hsla(0, 0%, 100%, 0.8) ;
+}
+

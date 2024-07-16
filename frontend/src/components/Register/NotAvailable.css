@@ -1,0 +1,10 @@
+.notAvailable{
+    margin: 0px 0px;
+  padding: 0px 22px;
+  list-style-type: disc;
+  color: red;
+}
+.notAvailable li::marker {
+    font-size: 27px;
+    font-weight: 17px;
+  }

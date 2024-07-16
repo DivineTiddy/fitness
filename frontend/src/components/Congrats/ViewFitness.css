@@ -1,0 +1,61 @@
+
+.viewFitness{
+    width: 320px;
+    height: 730px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.showResult{
+    width: initial;
+    height: 540px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.showBtnContainer{
+    width: inherit;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.emojiAndTexts{
+    width: 320px;
+    height: 257px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.result{
+    width: 320px;
+    height: 243px;
+    background-color:  rgba(12, 20, 6, 1);
+}
+.texts{
+    width: 320px;
+    height: 107px;
+}
+.texts p{
+    text-align: center;
+}
+.resultDiv{
+    width: inherit;
+    height: 59px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.resultDiv p{
+    margin: 0px 10px;
+}
+.within{
+    width: inherit;
+    text-align: center;
+}
+
+

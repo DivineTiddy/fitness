@@ -1,0 +1,86 @@
+.welcomeContainer{
+    width: 320px;
+    height: 654px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+
+}
+.textContainerandsvg{
+    width: 313px;
+    height: 374px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.welcomeText{
+    font-weight: 700;
+    font-size: 27px;
+    margin: 0;
+    padding: 0;
+    
+}
+.textContainerandsvg ul{
+    height: 300px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.textContainerandsvg ul li{
+    height: 80px;
+    width: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.icon{
+    width: 40px;
+    height: 40px;
+}
+.content{
+    width: 252px;
+    height: 80px;
+}
+.tittleText{
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0;
+}
+.subText{
+    font-size: 12px;
+    font-weight: 300;
+    color: hsla(0, 0%, 100%, 0.8);
+    line-height: 18px;
+}
+.buttonContainer{
+    width: 320px;
+    height: 130px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.getAndLoginBtn{
+    width: 320px;
+    height: 55px;
+    border-radius: 100px;
+    border: none;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.get{
+    background-color: #AEFF01;
+    color: hsla(168, 56%, 2%, 1);    
+}
+.login{
+   background-color: hsla(79, 100%, 50%, 0.15);
+   color: hsla(79, 100%, 50%, 1);
+}

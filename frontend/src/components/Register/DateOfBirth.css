@@ -1,0 +1,62 @@
+.dateContainer{
+    width: 320px;
+    height: 579px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sexContainer{
+    width: inherit;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.sexBtn{
+    width: 320px;
+    height: 55px;
+    border-radius: 100px;
+    background-color: rgba(174, 255, 1, 1);
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+}
+
+.displayCalnder{
+    width: inherit;
+    height: 294px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.dateText{
+    width: 253px;
+    height: 54px;
+}
+.yourDateText1{
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+.yourDateText2{
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+    line-height: 25px;
+    color: hsla(0, 0%, 100%, 0.8);
+}
+.displayDate{
+    width: 320px;
+    height: 220px;
+    border: 1px solid white;
+}
+.selectSex{
+    width: inherit;
+    height: 56px;
+    background-color: rgba(0, 0, 0, 0.01);
+    color: white;
+    border: 1px solid hsla(0, 0%, 100%, 0.5);
+    outline: none;
+    border-radius: 5px;
+}

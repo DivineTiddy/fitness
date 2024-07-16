@@ -1,0 +1,87 @@
+.timeReminder {
+  width: 320px;
+  height: 643px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.time {
+  width: 320px;
+  height: 370px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.timeInput {
+  width: 320px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.timeTextArea {
+  width: inherit;
+  height: 67px;
+}
+.timeTextArea p {
+  margin: 0;
+}
+.timeForm {
+  width: 257px;
+  height: 113px;
+}
+.dot {
+  font-size: 36px;
+}
+.inputDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.inputDiv input {
+  width: 87px;
+  height: 86px;
+  font-size: 36px;
+  outline: none;
+  border: 3px solid rgba(174, 255, 1, 0.1);
+  background-color: inherit;
+  color: white;
+  text-align: center;
+}
+.minute {
+  background-color: rgba(174, 255, 1, 0.1) !important;
+}
+.amAndpm {
+  width: 43px;
+  height: 78px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.sizeamAndpm {
+  width: 43px;
+  height: 39px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(174, 255, 1, 1);
+}
+.am {
+  background-color: rgba(174, 255, 1, 1);
+  color: rgba(2, 7, 6, 1);
+}
+.pm {
+  background-color: rgba(174, 255, 1, 0.1) !important;
+}
+.minAndHours {
+  width: 161px;
+  height: 17px;
+  display: flex;
+  justify-content: space-between;
+}
+.minAndHours p {
+  font-size: 13px;
+  margin: 0;
+}
+

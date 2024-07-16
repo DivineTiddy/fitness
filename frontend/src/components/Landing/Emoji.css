@@ -1,0 +1,13 @@
+
+.emojiIcon{
+    animation: round 1s ease-in-out 0s infinite reverse ;
+
+}
+@keyframes round{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}

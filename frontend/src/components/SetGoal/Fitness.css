@@ -1,0 +1,31 @@
+.fitnessContainer{
+    height: 1113px;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.diagramContainer{
+    width: 320px;
+    height: 943px;
+}
+.goalProgressBarFitness{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.laterTextFitness{
+    color:  rgba(174, 255, 1, 1);
+}
+.diagramField{
+    width: inherit;
+    height: 762px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.findMore{
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}

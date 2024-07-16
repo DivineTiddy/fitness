@@ -1,0 +1,104 @@
+.targetAreasConatiner {
+  width: 320px;
+  height: 622px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.diagramContainer {
+  width: 320px;
+  height: 487px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.targetText {
+  width: 314px;
+  height: 114px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.text1 {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+.text2 {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: normal;
+  color: hsla(0, 0%, 100%, 0.8);
+  line-height: 20px;
+}
+.frontAndBackBtn {
+  width: 250px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.frontBtn{
+    width: 120px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 100px;
+    border: none;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.backBtn{
+    width: 120px;
+    height: 40px;
+    background-color: rgba(46, 52, 43, 1);
+    border-radius: 100px;
+    border: none;
+    font-size: 13px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+.targetDiagram {
+  width: 320px;
+  height: 338px;
+  display: flex;
+  justify-content: space-between;
+}
+.targetPhoto{
+    width: 169px;
+    height: inherit;
+}
+.targetCategory{
+    width: 126px;
+    height: 315px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.targetCategory button{
+  cursor: pointer;
+}
+.diagramBtn{
+    width: 126px;
+    height: 40px;
+    border: none;
+    border-radius: 100px;
+    background-color: rgba(46, 52, 43, 1);
+    color: rgba(255, 255, 255, 1);
+    font-size: 13px;
+    font-weight: bold;
+}
+.diagramBtnChange{
+  width: 126px;
+  height: 40px;
+  border: none;
+  border-radius: 100px;
+  background-color:rgba(36, 55, 5, 1);
+  color: rgba(165, 242, 1, 1);
+  font-size: 13px;
+  font-weight: bold;
+}
