@@ -19,7 +19,7 @@ app.use(cookie());
 
 // CONNECTION OF MONGODB.....................
 mongoose
-  .connect(process.env.connet_to_mogodb, {})
+  .connect(process.env.MONGODB_CONNECTION_STRING, {})
   .then(() => {
     console.log(`successfully`);
   })
