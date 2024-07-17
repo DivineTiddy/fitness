@@ -28,7 +28,12 @@ mongoose
   });
 //INITAILIZATION OF USER SCHEMA..............
 require("./models/UserSchema");
-
+app.get("/", (req, res) => {
+  
+  res.status(200).json({
+    massege: "done",
+  });
+});
 //ROUTER CONTROLLER.......................
 app.use("/api/v2/users", userRoute);
 
