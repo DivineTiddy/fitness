@@ -30,7 +30,7 @@ mongoose
 require("./models/UserSchema");
 
 //ROUTER CONTROLLER.......................
-app.use("/api/v2/users", userRoute);
+app.use("/", userRoute);
 
 
 // SERVER PORT.........................
