@@ -7,14 +7,9 @@ const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
 const cookie = require("cookie-parser");
-const port = process.env.PORT || 8000;
+const port = 8000;
 app.use(json());
-app.use(
-  cors({
-    origin: ["http://localhost:5173"],
-    credentials: true,
-  })
-);
+app.use(cors());
 app.use(cookie());
 
 // CONNECTION OF MONGODB.....................
@@ -29,14 +24,12 @@ mongoose
 //INITAILIZATION OF USER SCHEMA..............
 require("./models/UserSchema");
 app.get("/", (req, res) => {
-  
   res.status(200).json({
     massege: "done",
   });
 });
 //ROUTER CONTROLLER.......................
 app.use("/api/v2/users", userRoute);
-
 
 // SERVER PORT.........................
 app.listen(port, () => {
