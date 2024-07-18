@@ -13,7 +13,7 @@ const SigningIn = ({ setgetEmail }) => {
   function data(e) {
     e.preventDefault();
     SetisLoading(true);
-    Axios.post("http://localhost:8000/api/v2/users/login", {
+    Axios.post("https://fitness-1-9he3.onrender.com/api/v2/users/login", {
       password,
       email,
     })

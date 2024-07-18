@@ -22,7 +22,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LandingPage />}></Route>
-        <Route path="https://fitness-ed93.vercel.app/started" element={<Started />}></Route>
+        <Route path="/started" element={<Started />}></Route>
         <Route path="/creating" element={<CreateAccount />}>
           <Route index element={<SignUp />}></Route>
           <Route path="date" element={<DateOfBirth />}></Route>
