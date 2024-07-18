@@ -7,7 +7,7 @@ const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
 const cookie = require("cookie-parser");
-const port = 10000;
+const port = process.env.PORT || 4000;
 app.use(json());
 app.use(cors());
 app.use(cookie());
