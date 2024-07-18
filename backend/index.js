@@ -19,7 +19,7 @@ mongoose
     console.log(`successfully`);
   })
   .catch(() => {
-    console.log(`failed`);
+    console.log(`fail`);
   });
 //INITAILIZATION OF USER SCHEMA..............
 require("./models/UserSchema");
