@@ -8,7 +8,7 @@ const FlexQuest = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      navigate("/started");
+      navigate("https://fitness-ed93.vercel.app/started");
     }, 8000);
   });
   return (
