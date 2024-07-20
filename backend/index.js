@@ -25,7 +25,7 @@ mongoose
 require("./models/UserSchema");
 
 //ROUTER CONTROLLER.......................
-app.use("/api/v2/users", userRoute);
+app.use("/api/users", userRoute);
 app.all("*" , (req , res)=>{
   res.status(400).json({
     status:"failed",
