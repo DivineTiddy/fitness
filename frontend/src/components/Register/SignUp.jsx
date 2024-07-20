@@ -40,7 +40,7 @@ const SignUp = () => {
             });
           
 
-          navigate("/login");
+          navigate("/targer");
         } else {
           alert(accept);
         }

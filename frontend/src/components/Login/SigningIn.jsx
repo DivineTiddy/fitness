@@ -21,7 +21,7 @@ const SigningIn = ({ setgetEmail }) => {
         if (response.data.status) {
           setgetEmail(email);
           SetisLoading(false);
-          navigate("/targer");
+          navigate("/congratulations");
           console.log(response);
         }
       })
