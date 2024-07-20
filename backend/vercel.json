@@ -8,7 +8,7 @@
     ],
     "routes": [
       {
-        "src": "/api/v2/users(.*)",  
+        "src": "/(.*)",  
         "dest": "/"  
       }
     ]
