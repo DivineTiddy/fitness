@@ -8,6 +8,8 @@ const login = async (req, res) => {
     const userModel = mongoose.model("users");
     const { password, email } = req.body;
     const getEmail = await userModel.findOne({ email: email });
+    const name = await userModel.findOne({ name: name });
+
     const comparePassword = await bcrypt.compare(password, getEmail.password);
     // CONDITION IF PASSWORD IS EQUAL TO BCRYPT PASSWORD.............................
     if (comparePassword) {
@@ -20,6 +22,7 @@ const login = async (req, res) => {
       res.status(200).json({
         status: true,
         massages: "login successfully",
+        name: name,
       });
     } else {
       throw "wrong password";

@@ -9,7 +9,7 @@ const FlexQuest = () => {
   useEffect(() => {
     setTimeout(() => {
       navigate("/started");
-    }, 8000);
+    }, 5000);
   });
   return (
     <div className="emoji_container">
