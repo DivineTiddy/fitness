@@ -20,7 +20,7 @@ const ViewFitness = ({ email }) => {
       async function fetchData() {
         try {
           const response = await fetch(
-            `http://localhost:8000/api/v2/users/data?email=${email}`
+            `https://fitness-3.onrender.com/api/users/data?email=${email}`
           );
           const newResponse = await response.json();
           if (newResponse.status) {

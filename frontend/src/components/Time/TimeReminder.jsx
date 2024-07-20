@@ -16,7 +16,7 @@ const TimeReminder = ({ email }) => {
 
   function data(e) {
     e.preventDefault();
-    Axios.post("http://localhost:8000/api/v2/users/reminder", {
+    Axios.post("https://fitness-3.onrender.com/api/users/reminder", {
       hour,
       minutes,
       email,

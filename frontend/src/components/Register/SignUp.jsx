@@ -20,7 +20,7 @@ const SignUp = () => {
   function data(e) {
     e.preventDefault();
    // SetisLoading(true);
-    Axios.post("http://localhost:8000/api/v2/users/register", {
+    Axios.post("https://fitness-3.onrender.com/api/users/register", {
       password,
       email,
       name,
