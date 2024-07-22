@@ -7,6 +7,7 @@ import NoColor from "./NoColor";
 import { useNavigate } from "react-router-dom";
 import Axios from "axios";
 import propTypes from "prop-types";
+import { toast } from "react-toastify";
 
 const SetMatricComp = ({ email }) => {
   const [isOpen1, SetIsopen1] = useState(true);
@@ -52,7 +53,18 @@ const SetMatricComp = ({ email }) => {
         console.log(response);
       })
       .catch((error) => {
-        console.log(error);
+        if (error.code === "ERR_NETWORK") {
+          toast.error(`Please connect your internet`, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
+        }
       });
   }
 

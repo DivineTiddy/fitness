@@ -26,6 +26,7 @@ const SignUp = () => {
       name,
     })
       .then((response) => {
+        console.log(response)
         if (response.data.status && accept) {
        //   SetisLoading(false);
           toast.success('created', {
@@ -41,12 +42,13 @@ const SignUp = () => {
           
 
           navigate("/targer");
-        } else {
-          alert(accept);
         }
       })
       .catch((error) => {
-        if (error.response) {
+        console.log(error);
+
+        if (error.code === 
+          "ERR_BAD_REQUEST") {
           const newError = error.response.data.massage;
           toast.error(`${newError}`, {
             position: "top-right",
@@ -58,6 +60,18 @@ const SignUp = () => {
             progress: undefined,
             theme: "dark",
           });
+        }else if (error.code === 'ERR_NETWORK') {
+          toast.error(`Please connect your internet`, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
+
         }
       });
   }

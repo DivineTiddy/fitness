@@ -5,6 +5,7 @@ const metricsGoal = async (req, res) => {
     // USER MODEL API............................................
     const usersModel = mongoose.model("users");
     const { metricsGoal, loss, within, email } = req.body;
+    if(!metricsGoal) throw "Please select a metric"
     // CHECK USER MODEL AND UPDATE......................
     await usersModel.updateOne(
       {

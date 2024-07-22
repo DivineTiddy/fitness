@@ -26,9 +26,12 @@ const SigningIn = ({ setgetEmail }) => {
         }
       })
       .catch((err) => {
+
         console.log(err);
         if (err.response) {
-          toast.error("wrong password", {
+          const newError = err.response.data.massage;
+
+          toast.error(`${newError}`, {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
@@ -38,11 +41,22 @@ const SigningIn = ({ setgetEmail }) => {
             progress: undefined,
             theme: "light",
           });
+        }else if (err.code === 'ERR_NETWORK') {
+          toast.error(`Please connect your internet`, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
+
         }
       });
 
-    console.log(email);
-    console.log(password);
+   
   }
 
   return (
@@ -72,8 +86,8 @@ const SigningIn = ({ setgetEmail }) => {
               </label>
             </div>
             <label className="policy">
-              <Link>
-                <p className="policyText">Forget password</p>
+              <Link to="/creating">
+                <p className="policyText">sign up</p>
               </Link>
             </label>
           </section>

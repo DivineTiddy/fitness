@@ -8,7 +8,7 @@ const register = async (req, res) => {
     const usersModel = mongoose.model("users");
     const { name, password, email } = req.body;
     const getDupliateemail = await usersModel.findOne({ email: email });
-    if (getDupliateemail) throw "email already exists";
+    if (getDupliateemail) throw "Email already exists";
 
     if (!name) throw "Name must be provided";
     if (!password) throw "Password must be provided";
