@@ -3,6 +3,7 @@
 .fitnessGoal{
     background-color: #000306;
     color: white;
+    width: 360px;
     height: 1327px;
     border: 1px solid black;
     display: flex;

@@ -50,9 +50,10 @@ const SetMatricComp = ({ email }) => {
         if (response.data.status) {
           navigate("/remeinder");
         }
-        console.log(response);
       })
       .catch((error) => {
+        console.log(error);
+
         if (error.code === "ERR_NETWORK") {
           toast.error(`Please connect your internet`, {
             position: "top-right",
