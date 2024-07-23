@@ -71,7 +71,7 @@ const SigningIn = ({ setgetEmail }) => {
                   onChange={(e) => SetuserEmail(e.target.value)}
                   className="userFill"
                   type="email"
-                  placeholder="divine@gmail.com (optional)"
+                  placeholder="divine@gmail.com"
                 />
               </label>
               <label className="inputUserstyle">
@@ -80,7 +80,6 @@ const SigningIn = ({ setgetEmail }) => {
                   className="userFill"
                   type="password"
                   placeholder="password"
-                  required
                 />
               </label>
             </div>
