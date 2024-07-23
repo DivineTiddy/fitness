@@ -28,7 +28,7 @@ const login = async (req, res) => {
     }
   } catch (error) {
     res.status(404).json({
-      status: "failed to login",
+      status: error ,
       massage: error,
     });
   }
