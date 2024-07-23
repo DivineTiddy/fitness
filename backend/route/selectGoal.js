@@ -6,6 +6,7 @@ const selectGoal = async (req, res) => {
 
     const usersModel = mongoose.model("users");
     const { selectGoal, email } = req.body;
+    if(!selectGoal) throw ("Please select your goal")
     await usersModel.updateOne(
       {
         email: email,

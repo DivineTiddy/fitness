@@ -37,6 +37,8 @@ const Fitness = ({ email }) => {
       email,
     })
       .then((response) => {
+        console.log(response);
+
         if (response.data.status) {
           navigate("/matric");
         }

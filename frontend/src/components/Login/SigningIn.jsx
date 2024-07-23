@@ -87,7 +87,7 @@ const SigningIn = ({ setgetEmail }) => {
             </div>
             <label className="policy">
               <Link to="/creating">
-                <p className="policyText">sign up</p>
+                <p className="policyText">Reset password</p>
               </Link>
             </label>
           </section>

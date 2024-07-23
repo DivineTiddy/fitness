@@ -14,6 +14,7 @@ const ViewFitness = ({ email }) => {
   const [minutes, setminutesr] = useState(Number);
   const [metricsGoal, setmetricsGoal] = useState("");
   const [loss, setloss] = useState(Number);
+  const [name , setName] = useState("")
 
   useEffect(
     function () {
@@ -30,6 +31,7 @@ const ViewFitness = ({ email }) => {
             setminutesr(newResponse.result.data.minutes);
             setmetricsGoal(newResponse.result.data.metricsGoal);
             setloss(newResponse.result.data.loss);
+            setName(newResponse.result.data.name)
           }
         } catch (error) {
           console.log(error);
@@ -47,7 +49,7 @@ const ViewFitness = ({ email }) => {
           <Emoji />
           <div className="texts">
             <p className="matricText1">
-              Congratulations! You’ve set a fitness goal!
+              Congratulations! {name} You’ve set a fitness goal!
             </p>
             <p className="matricText2">
               Great Job! Remember, you can add new goals and you can edit your
@@ -76,7 +78,7 @@ const ViewFitness = ({ email }) => {
           <div className="resultDiv">
             <p className="within">
               <span className="matricText2">I want to lose </span>
-              {loss} KG <span className="matricText2">within</span>
+              {loss} KG <span className="matricText2"> within </span>
               {within} Weeks
             </p>
           </div>
