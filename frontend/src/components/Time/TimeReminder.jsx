@@ -38,7 +38,7 @@ const TimeReminder = ({ email }) => {
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            theme: "light",
+            theme: "dark",
           });
         } else if (error.code === "ERR_NETWORK") {
           toast.error(`Please connect your internet`, {

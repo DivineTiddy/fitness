@@ -52,8 +52,6 @@ const SetMatricComp = ({ email }) => {
         }
       })
       .catch((error) => {
-        console.log(error);
-
         if (error.code === "ERR_NETWORK") {
           toast.error(`Please connect your internet`, {
             position: "top-right",

@@ -27,7 +27,6 @@ const SigningIn = ({ setgetEmail }) => {
       })
       .catch((err) => {
 
-        console.log(err);
         if (err.response) {
           const newError = err.response.data.massage;
 
@@ -39,7 +38,7 @@ const SigningIn = ({ setgetEmail }) => {
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            theme: "light",
+            theme: "dark",
           });
         }else if (err.code === 'ERR_NETWORK') {
           toast.error(`Please connect your internet`, {

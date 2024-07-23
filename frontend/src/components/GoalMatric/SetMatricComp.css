@@ -87,13 +87,14 @@
 
 }
 .matricLabel select{
-    background-color: inherit;
+    background-color: black;
     color: hsla(0, 0%, 100%, 0.8);
     width: 119px;
     height: 40px;
     outline: none;
     border-radius: 5px;
     border:1px solid hsla(0, 0%, 100%, 0.8) ;
+
 }
 .matricText3{
     font-size: 16px;
