@@ -17,18 +17,7 @@ const Fitness = ({ email }) => {
   function HandleClick(e) {
     setgoal(e);
   }
-  function HandleError() {
-    toast.error(`Please select a goal`, {
-      position: "top-right",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-    });
-  }
+ 
 
   function data(e) {
     e.preventDefault();
@@ -45,6 +34,19 @@ const Fitness = ({ email }) => {
       })
       .catch((error) => {
         console.log(error);
+        const newError = error.response.data.massage;
+        if (error.response) {
+          toast.error(`${newError}`, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
+        }
         if (error.code === "ERR_NETWORK") {
           toast.error(`Please connect your internet`, {
             position: "top-right",
@@ -187,7 +189,7 @@ const Fitness = ({ email }) => {
               <Dot /> Find more goals that suit your preferences
             </p>
           </div>
-          <button onClick={HandleError} className="signUpBtn">
+          <button className="signUpBtn">
             Next
           </button>
         </div>

@@ -12,7 +12,7 @@ const getAlldata = async (req, res) => {
       },
     });
   } catch (error) {
-    res.status(201).json({
+    res.status(400).json({
       massage: " fail",
       status: error.massage,
     });

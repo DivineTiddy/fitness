@@ -28,7 +28,7 @@ const metricsGoal = async (req, res) => {
       status: true,
     });
   } catch (error) {
-    res.status(201).json({
+    res.status(400).json({
       massage: " fail",
       status: error.massage,
     });
