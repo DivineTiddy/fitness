@@ -31,11 +31,11 @@ const SigningIn = ({ setgetEmail }) => {
           });
         }
       })
-      .catch((err) => {
-        console.log(err);
+      .catch((error) => {
+        console.log(error);
 
-        if (err.response) {
-          const newError = err.response.data.massage;
+        if (error.response) {
+          const newError = error.response.data.statu;
           toast.error(`${newError}`, {
             position: "top-right",
             autoClose: 5000,
@@ -46,7 +46,7 @@ const SigningIn = ({ setgetEmail }) => {
             progress: undefined,
             theme: "dark",
           });
-        } else if (err.code === "ERR_NETWORK") {
+        } else if (error.code === "ERR_NETWORK") {
           toast.error(`Please connect your internet`, {
             position: "top-right",
             autoClose: 5000,

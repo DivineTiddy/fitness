@@ -21,12 +21,14 @@ const login = async (req, res) => {
       // RESPONES API..................................
       res.status(200).json({
         status: true,
-        massages: "login successfully",
+        massage: "Login successfully",
       });
+    }else{
+      throw "Wrong password"
     }
   } catch (error) {
     res.status(404).json({
-      statu: "failed to login",
+      status: "failed to login",
       massage: error,
     });
   }
