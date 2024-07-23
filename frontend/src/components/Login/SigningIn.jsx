@@ -9,10 +9,8 @@ const SigningIn = ({ setgetEmail }) => {
   const navigate = useNavigate();
   const [password, SetuserPassword] = useState("");
   const [email, SetuserEmail] = useState("");
-  const [isLoading, SetisLoading] = useState(false);
   function data(e) {
     e.preventDefault();
-    SetisLoading(true);
     Axios.post("https://fitness-3.onrender.com/api/users/login", {
       password,
       email,
@@ -20,16 +18,23 @@ const SigningIn = ({ setgetEmail }) => {
       .then((response) => {
         if (response.data.status) {
           setgetEmail(email);
-          SetisLoading(false);
           navigate("/congratulations");
-          console.log(response);
+          toast.success('Successfully login', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            });
         }
       })
       .catch((err) => {
 
         if (err.response) {
           const newError = err.response.data.massage;
-
           toast.error(`${newError}`, {
             position: "top-right",
             autoClose: 5000,
@@ -91,7 +96,7 @@ const SigningIn = ({ setgetEmail }) => {
           </section>
         </div>
         <button type="submit" className="signUpBtn">
-          {isLoading ? "Please wait...." : " Next"}
+        Next
         </button>
       </div>
     </form>

@@ -26,7 +26,7 @@ const reminder = async (req, res) => {
       massage: "successful",
     });
   } catch (error) {
-    res.status(400).json({
+    res.status(404).json({
       status: false,
       massage: error,
     });

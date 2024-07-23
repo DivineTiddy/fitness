@@ -7,15 +7,12 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const SignUp = () => {
-  const [accept, Setaccept] = useState(false);
   const [name, SetuserName] = useState("");
   const [email, SetuserEmail] = useState("");
   const [password, SetuserPassword] = useState("");
   //const [isLoading, SetisLoading] = useState(false);
   const navigate = useNavigate();
-  function HandleCheckbok() {
-    Setaccept((el) => !el);
-  }
+ 
   const user = "divine";
   function data(e) {
     e.preventDefault();
@@ -27,9 +24,9 @@ const SignUp = () => {
     })
       .then((response) => {
         console.log(response)
-        if (response.data.status && accept) {
+        if (response.data.status ) {
        //   SetisLoading(false);
-          toast.success('created', {
+          toast.success('Created', {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
@@ -122,7 +119,6 @@ const SignUp = () => {
             </div>
             <label className="policy">
               <input
-                onClick={HandleCheckbok}
                 className="checkbox"
                 type="checkbox"
               />

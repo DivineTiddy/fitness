@@ -26,10 +26,8 @@ const TimeReminder = ({ email }) => {
         }
       })
       .catch((error) => {
-        console.log(error);
         if (error.response) {
           const newError = error.response.data.massage;
-
           toast.error(`${newError}`, {
             position: "top-right",
             autoClose: 5000,
