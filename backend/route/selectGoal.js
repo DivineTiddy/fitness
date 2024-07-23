@@ -27,8 +27,8 @@ const selectGoal = async (req, res) => {
     });
   } catch (error) {
     res.status(400).json({
-      massage: " fail",
-      status: error.massage,
+      massage: error,
+      status: false,
 
       // users:req.users._id
     });

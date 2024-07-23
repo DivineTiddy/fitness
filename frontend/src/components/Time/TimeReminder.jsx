@@ -3,13 +3,12 @@ import { useState } from "react";
 import Axios from "axios";
 import { useNavigate } from "react-router-dom";
 import propTypes from "prop-types";
+import { toast } from "react-toastify";
 
 const TimeReminder = ({ email }) => {
   const navigate = useNavigate();
-
   const [hour, Sethour] = useState(null);
   const [minutes, Setminutes] = useState(null);
-  //const [_id, Set_id] = useState("66735edc1510127e366290d2");
   function HandleHours(e) {
     Sethour(e.target.value);
   }
@@ -20,7 +19,6 @@ const TimeReminder = ({ email }) => {
       hour,
       minutes,
       email,
-      // _id,
     })
       .then((response) => {
         if (response.data.status) {
@@ -29,6 +27,31 @@ const TimeReminder = ({ email }) => {
       })
       .catch((error) => {
         console.log(error);
+        if (error.response) {
+          const newError = error.response.data.massage;
+
+          toast.error(`${newError}`, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
+        } else if (error.code === "ERR_NETWORK") {
+          toast.error(`Please connect your internet`, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
+        }
       });
   }
 

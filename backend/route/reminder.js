@@ -5,7 +5,11 @@ const reminder = async (req, res) => {
     // USER MODEL API............................................
 
     const usersModel = mongoose.model("users");
-    const { hour, minutes, am_And_pm, email } = req.body;
+    const { hour, minutes, email } = req.body;
+    if(!hour) throw ("Hour is required")
+      if(!minutes) throw ("Minutes is required")
+
+
     await usersModel.updateOne(
       {
         email: email,
@@ -24,7 +28,7 @@ const reminder = async (req, res) => {
   } catch (error) {
     res.status(400).json({
       status: false,
-      massage: error.massage,
+      massage: error,
     });
   }
 };
