@@ -23,8 +23,6 @@ const login = async (req, res) => {
         status: true,
         massages: "login successfully",
       });
-    } else {
-      throw "wrong password";
     }
   } catch (error) {
     res.status(404).json({

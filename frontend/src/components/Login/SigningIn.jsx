@@ -19,7 +19,7 @@ const SigningIn = ({ setgetEmail }) => {
         if (response.data.status) {
           setgetEmail(email);
           navigate("/congratulations");
-          toast.success('Successfully login', {
+          toast.success("Successfully login", {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
@@ -28,10 +28,11 @@ const SigningIn = ({ setgetEmail }) => {
             draggable: true,
             progress: undefined,
             theme: "dark",
-            });
+          });
         }
       })
       .catch((err) => {
+        console.log(err);
 
         if (err.response) {
           const newError = err.response.data.massage;
@@ -45,7 +46,7 @@ const SigningIn = ({ setgetEmail }) => {
             progress: undefined,
             theme: "dark",
           });
-        }else if (err.code === 'ERR_NETWORK') {
+        } else if (err.code === "ERR_NETWORK") {
           toast.error(`Please connect your internet`, {
             position: "top-right",
             autoClose: 5000,
@@ -56,15 +57,12 @@ const SigningIn = ({ setgetEmail }) => {
             progress: undefined,
             theme: "dark",
           });
-
         }
       });
-
-   
   }
 
   return (
-    <form onSubmit={data}>
+    <form onSubmit={data} >
       <div className="signUpContainer">
         <div className="signUpMain">
           <p className="signUpText">Enter your email and password to login</p>
@@ -89,14 +87,15 @@ const SigningIn = ({ setgetEmail }) => {
               </label>
             </div>
             <label className="policy">
-              <Link to="/creating">
+              <Link>
                 <p className="policyText">Reset password</p>
               </Link>
             </label>
           </section>
         </div>
-        <button type="submit" className="signUpBtn">
-        Next
+        <button 
+        type="submit" className="signUpBtn">
+          Next
         </button>
       </div>
     </form>
