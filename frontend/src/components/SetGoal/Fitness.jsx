@@ -12,7 +12,7 @@ import { toast } from "react-toastify";
 
 const Fitness = ({ email }) => {
   const navigate = useNavigate();
-  const [selectGoal, setgoal] = useState("Loss weight");
+  const [selectGoal, setgoal] = useState("");
   // GET SELECTED GOAL VALUE
   function HandleClick(e) {
     setgoal(e);
