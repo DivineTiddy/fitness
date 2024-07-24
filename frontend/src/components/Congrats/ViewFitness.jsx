@@ -3,6 +3,8 @@ import Emoji from "../Landing/Emoji";
 import "./ViewFitness.css";
 import { useEffect, useState } from "react";
 import propTypes from "prop-types";
+import { toast } from "react-toastify";
+
 
 // CONGRACTULATION COMPONENT
 function SetToUpper(el) {
@@ -39,7 +41,18 @@ const ViewFitness = ({ email }) => {
             setName(newResponse.result.data.name)
           }
         } catch (error) {
-          console.log(error);
+           if (error.code === "ERR_NETWORK") {
+            toast.error(`Please connect your internet`, {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "dark",
+            });
+          }
         }
       }
       fetchData();
