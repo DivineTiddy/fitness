@@ -10,13 +10,13 @@ const SignUp = () => {
   const [name, SetuserName] = useState("");
   const [email, SetuserEmail] = useState("");
   const [password, SetuserPassword] = useState("");
-  //const [isLoading, SetisLoading] = useState(false);
+  const [isLoading, SetisLoading] = useState(false);
   const navigate = useNavigate();
  
   const user = "divine";
   function data(e) {
     e.preventDefault();
-   // SetisLoading(true);
+    SetisLoading(true);
     Axios.post("https://fitness-3.onrender.com/api/users/register", {
       password,
       email,
@@ -25,7 +25,7 @@ const SignUp = () => {
       .then((response) => {
         console.log(response)
         if (response.data.status ) {
-       //   SetisLoading(false);
+          SetisLoading(false);
           toast.success('Created', {
             position: "top-right",
             autoClose: 5000,
@@ -130,7 +130,7 @@ const SignUp = () => {
           </section>
         </div>
         <button type="submit" className="signUpBtn">
-          Login
+          {isLoading ? " Please wait..." : "Login"}
         </button>
       </div>
     </form>
