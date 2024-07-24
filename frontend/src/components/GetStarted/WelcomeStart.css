@@ -84,3 +84,6 @@
    background-color: hsla(79, 100%, 50%, 0.15);
    color: hsla(79, 100%, 50%, 1);
 }
+.link{
+    text-decoration: none;
+}

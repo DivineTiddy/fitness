@@ -1,0 +1,39 @@
+.loadingEmoji p {
+  color: black;
+  position: relative;
+}
+
+.loadingEmoji p::after {
+  position: absolute;
+  animation: b 3s infinite linear;
+  color: black;
+  content: "";
+  left: 105%;
+}
+
+@keyframes b {
+  0% {
+    content: "";
+  }
+
+  10% {
+    content: ".";
+  }
+  30% {
+    content: "..";
+  }
+  40% {
+    content: "...";
+  }
+  50% {
+    content: "....";
+  }
+
+  70% {
+    content: ".....";
+  }
+
+  100% {
+    content: "";
+  }
+}

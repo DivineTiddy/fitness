@@ -4,13 +4,17 @@ import { Link, useNavigate } from "react-router-dom";
 import Axios from "axios";
 import { toast } from "react-toastify";
 import propTypes from "prop-types";
+import LoadingEmoji from "../Register/LoadingEmoji";
 
 const SigningIn = ({ setgetEmail }) => {
   const navigate = useNavigate();
   const [password, SetuserPassword] = useState("");
   const [email, SetuserEmail] = useState("");
+  const [isLoading, SetisLoading] = useState(false);
+
   function data(e) {
     e.preventDefault();
+    SetisLoading(true);
     Axios.post("https://fitness-3.onrender.com/api/users/login", {
       password,
       email,
@@ -18,6 +22,7 @@ const SigningIn = ({ setgetEmail }) => {
       .then((response) => {
         const newError = response.data.massage
         if (response.data.status) {
+          SetisLoading(false);
           setgetEmail(email);
           navigate("/congratulations");
           toast.success(`${newError}`, {
@@ -58,6 +63,9 @@ const SigningIn = ({ setgetEmail }) => {
             theme: "dark",
           });
         }
+      })
+      .finally(()=>{
+        SetisLoading(false)
       });
   }
 
@@ -95,7 +103,8 @@ const SigningIn = ({ setgetEmail }) => {
         </div>
         <button 
         type="submit" className="signUpBtn">
-          Next
+           {isLoading ? <LoadingEmoji/> : "Next"}
+          
         </button>
       </div>
     </form>

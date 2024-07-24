@@ -5,6 +5,7 @@ import { useState } from "react";
 import Axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import LoadingEmoji from "./LoadingEmoji";
 
 const SignUp = () => {
   const [name, SetuserName] = useState("");
@@ -70,7 +71,10 @@ const SignUp = () => {
           });
 
         }
-      });
+      })
+      .finally(()=>{
+        SetisLoading(false)
+      })
   }
 
   return (
@@ -130,7 +134,8 @@ const SignUp = () => {
           </section>
         </div>
         <button type="submit" className="signUpBtn">
-          {isLoading ? " Please wait..." : "Login"}
+        
+          {isLoading ? <LoadingEmoji/> : "Login"}
         </button>
       </div>
     </form>

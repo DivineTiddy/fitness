@@ -154,7 +154,7 @@ const WelcomeStart = () => {
       </div>
 
       <div className="buttonContainer">
-        <Link to="/creating">
+        <Link className="link" to="/creating">
           <button className=" signUpBtn">Get Started</button>
         </Link>
 
