@@ -9,8 +9,6 @@ const login = async (req, res) => {
     const { password, email } = req.body;
     const getEmail = await userModel.findOne({ email: email });
     const comparePassword = await bcrypt.compare(password, getEmail.password);
-    if (!password) throw "Password must be provided";
-    if (!email) throw "Email must be provided";
     // CONDITION IF PASSWORD IS EQUAL TO BCRYPT PASSWORD.............................
     if (comparePassword) {
       const token = jwt.sign({ name: getEmail.name }, process.env.KEY, {
@@ -28,7 +26,7 @@ const login = async (req, res) => {
     }
   } catch (error) {
     res.status(404).json({
-      status: error ,
+      status:  "failed to login",
       massage: error,
     });
   }

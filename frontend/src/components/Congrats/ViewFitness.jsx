@@ -5,6 +5,10 @@ import { useEffect, useState } from "react";
 import propTypes from "prop-types";
 
 // CONGRACTULATION COMPONENT
+function SetToUpper(el) {
+  return el.charAt(0).toUpperCase() + el.slice(1)
+  
+}
 
 const ViewFitness = ({ email }) => {
   //const [data, setData] = useState({});
@@ -15,6 +19,7 @@ const ViewFitness = ({ email }) => {
   const [metricsGoal, setmetricsGoal] = useState("");
   const [loss, setloss] = useState(Number);
   const [name , setName] = useState("")
+  const nameToUpper = SetToUpper(name)
 
   useEffect(
     function () {
@@ -49,7 +54,7 @@ const ViewFitness = ({ email }) => {
           <Emoji />
           <div className="texts">
             <p className="matricText1">
-              Congratulations! {name} You’ve set a fitness goal!
+              Congratulations! {nameToUpper} You’ve set a fitness goal!
             </p>
             <p className="matricText2">
               Great Job! Remember, you can add new goals and you can edit your

@@ -16,13 +16,14 @@ const SigningIn = ({ setgetEmail }) => {
       email,
     })
       .then((response) => {
+        const newError = response.data.massage
         if (response.data.status) {
           setgetEmail(email);
           navigate("/congratulations");
-          toast.success("Successfully login", {
+          toast.success(`${newError}`, {
             position: "top-right",
             autoClose: 5000,
-            hideProgressBar: false,
+            hideProgressBar: false, 
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
@@ -35,8 +36,7 @@ const SigningIn = ({ setgetEmail }) => {
         console.log(error);
 
         if (error.response) {
-          const newError = error.response.data.statu;
-          toast.error(`${newError}`, {
+          toast.error("Incorrect passward or email", {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
