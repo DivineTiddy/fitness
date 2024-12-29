@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import { useState } from "react";
 import "./App.css";
 import LandingPage from "./pages/LandingPage";
@@ -19,7 +19,7 @@ function App() {
   const [email , setgetEmail] = useState("tiddy@gmail.com")
   
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<LandingPage />}></Route>
         <Route path="/started" element={<Started />}></Route>
@@ -36,7 +36,7 @@ function App() {
 
 
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
